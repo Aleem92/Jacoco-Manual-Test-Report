@@ -1,0 +1,5 @@
+ adb  install -g app/build/outputs/apk/debug/app-debug.apk
+
+adb shell am instrument -e coverage true -w com.example.manualtestreport/com.example.manualtestreport.utils.JacocoInstrumentation
+
+./gradlew DebugCoverageJacocoReport
